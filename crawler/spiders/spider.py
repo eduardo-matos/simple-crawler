@@ -8,8 +8,8 @@ from ..items import ProductItem
 
 
 class EpocaCosmeticosSpider(CrawlSpider):
-    name = "epoca_cosmeticos"
-    allowed_domains = ["www.epocacosmeticos.com.br"]
+    name = 'epoca_cosmeticos'
+    allowed_domains = ['www.epocacosmeticos.com.br']
     start_urls = ['http://www.epocacosmeticos.com.br/']
 
     rules = (
