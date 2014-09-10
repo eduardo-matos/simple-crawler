@@ -1,0 +1,6 @@
+import unittest
+from tests.test_epoca_cosmeticos import *
+
+
+if __name__ == '__main__':
+    unittest.main()

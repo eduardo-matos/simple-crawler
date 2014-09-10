@@ -1,1 +1,2 @@
 scrapy==0.24.4
+forked-path==0.2.3
