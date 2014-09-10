@@ -10,4 +10,4 @@ run `pip install -r requirements.txt`.
 run `scrapy crawl crawler -o products.csv -t csv`.
 
 ## Testing
-[TO DO]
+run `python runtests.py`.
