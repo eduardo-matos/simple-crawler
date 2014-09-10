@@ -43,7 +43,7 @@ class SpiderAcceptanceTest(TestCase):
             item = spider.parser(response).next()
             self.assertEquals(link, item['url'])
             self.assertTrue(len(item['name']) > 0, 'Product has no name')
-            self.assertTrue(item['price'] > 0, 'Product has no price')
+            self.assertTrue(len(item['title']) > 0, 'Product has no title')
 
             return
 

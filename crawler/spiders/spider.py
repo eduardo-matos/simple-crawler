@@ -1,6 +1,5 @@
 # coding: utf-8
 
-from decimal import Decimal
 import scrapy
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors import LinkExtractor
@@ -20,11 +19,11 @@ class EpocaCosmeticosSpider(CrawlSpider):
         if response.css('body.produto'):
             url = response.url
             name = response.xpath("//div[contains(@class, 'productName')]/text()").extract()[0]
-            price = Decimal(response.xpath("//strong[contains(@class, 'skuBestPrice')]/text()").extract()[0].lstrip('R$ ').replace(',', '.'))
+            price = response.xpath("//title/text()").extract()[0]
 
             item = ProductItem()
             item['url'] = url
             item['name'] = name
-            item['price'] = price
+            item['title'] = price
 
             yield item

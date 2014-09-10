@@ -1,7 +1,6 @@
 # coding: utf-8
 
 from unittest import TestCase
-from decimal import Decimal
 from path import path
 from scrapy.http import Request, HtmlResponse
 from crawler.spiders.spider import EpocaCosmeticosSpider
@@ -46,4 +45,4 @@ class SpiderTest(TestCase):
         item = spider.parser(response).next()
         self.assertEquals(BASE_URL, item['url'])
         self.assertEquals('Random product name', item['name'])
-        self.assertEquals(Decimal('79.02'), item['price'])
+        self.assertEquals('Random product title', item['title'])
